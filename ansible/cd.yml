@@ -1,11 +1,9 @@
----
 
-- hosts: automation
+- hosts: localhost
   remote_user: vagrant
   become: yes
   roles:
     - java
     - docker
     - registry
-    - maven
     - jenkins

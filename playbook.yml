@@ -1,0 +1,8 @@
+---
+
+- name: ci
+  hosts: ci
+  become: yes
+  roles:
+    - generals
+    - Java
