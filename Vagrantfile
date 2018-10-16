@@ -24,7 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     cd.vm.hostname = "cd"
   end
   config.vm.define :prod do |prod|
-    prod.vm.network :forwarded_port, host: 2202, guest: 22, id: "ssh", auto_correct: true
+    prod.vm.network :forwarded_port, host: 202, guest: 22, id: "ssh", auto_correct: true
     prod.vm.network :forwarded_port, host: 9001, guest: 9001
     prod.vm.network "private_network", ip: "192.168.50.92"
     prod.vm.hostname = "prod"
